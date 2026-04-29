@@ -1,3 +1,6 @@
+% Declaraciones globales
+:- multifile pregunta_modulo/3.
+
 % Carga todos los archivos en orden
 :- consult('escala.pl').
 :- consult('activacion.pl').

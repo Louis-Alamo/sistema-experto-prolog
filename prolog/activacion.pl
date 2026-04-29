@@ -27,6 +27,9 @@ activar_modulo(tdah) :-
     valor_g(g9, G9), valor_g(g10, G10), valor_g(g11, G11),
     Suma is G9 + G10 + G11, Suma >= 6.
 
-% Lista todos los módulos activos
+% Lista solo los módulos implementados que estén activos
+modulos_implementados([ansiedad, duelo, tdah]).
+
 modulos_activos(Modulos) :-
-    findall(M, activar_modulo(M), Modulos).
+    modulos_implementados(Implementados),
+    findall(M, (member(M, Implementados), activar_modulo(M)), Modulos).
