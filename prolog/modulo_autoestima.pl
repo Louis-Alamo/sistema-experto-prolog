@@ -1,3 +1,6 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
+
 pregunta_modulo(autoestima, au1, '¿Con qué frecuencia te comparas con los demás y sientes que siempre llevas las de perder?').
 pregunta_modulo(autoestima, au2, '¿Con qué frecuencia te cuesta aceptar un cumplido o reconocimiento de otra persona?').
 pregunta_modulo(autoestima, au3, '¿Con qué frecuencia evitas intentar algo nuevo por miedo a fracasar o al qué dirán?').

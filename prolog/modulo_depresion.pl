@@ -1,3 +1,6 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
+
 puntaje_depresion(Total) :-
     respuesta(d1, D1), respuesta(d2, D2), respuesta(d3, D3),
     respuesta(d4, D4), respuesta(d5, D5), respuesta(d6, D6),

@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
 
 puntaje_duelo(Total) :-
     respuesta(du1, A1), respuesta(du2, A2), respuesta(du3, A3),

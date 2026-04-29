@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
 
 puntaje_tdah(Total) :-
     respuesta(t1, V1), respuesta(t2, V2), respuesta(t3, V3),

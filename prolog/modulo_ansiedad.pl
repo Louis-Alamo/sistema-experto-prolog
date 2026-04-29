@@ -1,3 +1,6 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
+
 % Calcula el puntaje total de ansiedad
 % Requiere que Python haya asertado: respuesta(a1, V), respuesta(a2, V)... etc.
 

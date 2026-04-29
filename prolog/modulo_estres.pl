@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
 
 pregunta_modulo(estres, e1, '¿Con qué frecuencia sientes que tienes más responsabilidades de las que puedes manejar?').
 pregunta_modulo(estres, e2, '¿Con qué frecuencia sientes que el tiempo no te alcanza para todo lo que tienes que hacer?').

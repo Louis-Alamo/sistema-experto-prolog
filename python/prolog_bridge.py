@@ -1,10 +1,18 @@
+# -*- coding: utf-8 -*-
 """
 prolog_bridge.py
-Capa de comunicación entre Python y SWI-Prolog.
+Capa de comunicación entre Python y Prolog usando pyswip.
 Incluye un PrologBridgeMock para pruebas de UI sin Prolog instalado.
 """
 
 import os
+import sys
+
+
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr.reconfigure(encoding='utf-8')
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -21,6 +29,12 @@ class PrologBridge:
         ruta = os.path.abspath(ruta)
         self.prolog.consult(ruta)
 
+    def _decodificar(self, valor):
+        """Decodifica valores desde Prolog a strings UTF-8."""
+        if isinstance(valor, bytes):
+            return valor.decode('utf-8')
+        return str(valor)
+
     def guardar_respuesta(self, pregunta_id: str, valor: int):
         """Inserta una respuesta en la base de conocimiento de Prolog."""
         self.prolog.retractall(f"respuesta({pregunta_id}, _)")
@@ -30,14 +44,14 @@ class PrologBridge:
         """Devuelve la lista de módulos que Prolog activa."""
         resultado = list(self.prolog.query("modulos_activos(M)"))
         if resultado:
-            return [str(m) for m in resultado[0]['M']]
+            return [self._decodificar(m) for m in resultado[0]['M']]
         return []
 
     def obtener_preguntas_modulo(self, modulo: str) -> list[dict]:
         """Obtiene las preguntas de un módulo desde Prolog."""
         query = f"pregunta_modulo({modulo}, ID, Texto)"
         resultado = list(self.prolog.query(query))
-        return [{'id': str(r['ID']), 'texto': str(r['Texto'])} for r in resultado]
+        return [{'id': self._decodificar(r['ID']), 'texto': self._decodificar(r['Texto'])} for r in resultado]
 
     def obtener_diagnosticos(self) -> list[dict]:
         """Obtiene todos los diagnósticos activos."""
@@ -45,9 +59,9 @@ class PrologBridge:
         resultado = list(self.prolog.query(query))
         return [
             {
-                'condicion': str(r['Condicion']),
+                'condicion': self._decodificar(r['Condicion']),
                 'puntaje':   int(r['Puntaje']),
-                'nivel':     str(r['Nivel']),
+                'nivel':     self._decodificar(r['Nivel']),
             }
             for r in resultado
         ]
@@ -56,7 +70,7 @@ class PrologBridge:
         """Obtiene las recomendaciones de una condición."""
         query = f"recomendacion({condicion}, Texto)"
         resultado = list(self.prolog.query(query))
-        return [str(r['Texto']) for r in resultado]
+        return [self._decodificar(r['Texto']) for r in resultado]
 
     def alerta_depresion_grave(self) -> bool:
         """Detecta si D3 fue respondida con a_menudo (3) o siempre (4)."""

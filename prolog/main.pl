@@ -1,3 +1,6 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
+
 % Declaraciones globales
 :- multifile pregunta_modulo/3.
 

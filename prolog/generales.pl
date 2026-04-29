@@ -1,3 +1,6 @@
+% -*- coding: utf-8 -*-
+:- encoding(utf8).
+
 % Preguntas generales
 
 pregunta_general(g1, '¿Con qué frecuencia te sientes triste o con el ánimo muy bajo?').
