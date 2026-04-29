@@ -5,10 +5,10 @@
 :- consult('escala.pl').
 :- consult('activacion.pl').
 :- consult('modulo_ansiedad.pl').
-%:- consult('modulo_depresion.pl'). <- Solo le quitas el simbolo de porcentaje
-%:- consult('modulo_estres.pl').
+:- consult('modulo_depresion.pl').
+:- consult('modulo_estres.pl').
 :- consult('modulo_duelo.pl').
-%:- consult('modulo_autoestima.pl').
+:- consult('modulo_autoestima.pl').
 :- consult('modulo_tdah.pl').
 :- consult('diagnostico.pl').
 :- consult('recomendaciones.pl').

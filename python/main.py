@@ -125,8 +125,11 @@ class App(ctk.CTk):
         pregunta = self._preguntas_modulo[self._idx_pregunta_m]
         nombre_modulo = {
             "ansiedad": "Módulo — Ansiedad",
-            "duelo":    "Módulo — Duelo",
-            "tdah":     "Módulo — TDAH",
+            "depresion": "Módulo — Depresión",
+            "estres": "Módulo — Estrés",
+            "duelo": "Módulo — Duelo",
+            "autoestima": "Módulo — Autoestima",
+            "tdah": "Módulo — TDAH",
         }.get(self._modulo_actual, f"Módulo — {self._modulo_actual.capitalize()}")
 
         self._ir_a(FramePregunta(

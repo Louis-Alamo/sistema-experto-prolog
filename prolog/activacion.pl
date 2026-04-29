@@ -28,7 +28,7 @@ activar_modulo(tdah) :-
     Suma is G9 + G10 + G11, Suma >= 6.
 
 % Lista solo los módulos implementados que estén activos
-modulos_implementados([ansiedad, duelo, tdah]).
+modulos_implementados([ansiedad, depresion, duelo, tdah,estres,autoestima]).
 
 modulos_activos(Modulos) :-
     modulos_implementados(Implementados),

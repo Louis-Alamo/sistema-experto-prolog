@@ -5,9 +5,9 @@ puntaje_duelo(Total) :-
     respuesta(du7, A7), respuesta(du8, A8),
     Total is A1 + A2 + A3 + A4 + A5 + A6 + A7 + A8.
 
-pregunta_modulo(duelo, du1, '¿Con qué frecuencia piensas en la persona, relación o situación que perdiste?').
-pregunta_modulo(duelo, du2, '¿Con qué frecuencia sientes que esa pérdida fue injusta o que no lo mereces?').
-pregunta_modulo(duelo, du3, '¿Con qué frecuencia sientes enojo, culpa o tristeza profunda cuando piensas en esa pérdida?').
+pregunta_modulo(duelo, du1, "¿Con qué frecuencia piensas en la persona, relación o situación que perdiste?").
+pregunta_modulo(duelo, du2, "¿Con qué frecuencia sientes que esa pérdida fue injusta o que no lo mereces?").
+pregunta_modulo(duelo, du3, "¿Con qué frecuencia sientes enojo, culpa o tristeza profunda cuando piensas en esa pérdida?").
 pregunta_modulo(duelo, du4, '¿Con qué frecuencia evitas hablar o pensar en lo que perdiste porque te genera demasiado dolor?').
 pregunta_modulo(duelo, du5, '¿Con qué frecuencia sientes que la vida ya no tiene el mismo sentido desde esa pérdida?').
 pregunta_modulo(duelo, du6, '¿Con qué frecuencia tienes dificultad para aceptar que esa pérdida es real o definitiva?').
