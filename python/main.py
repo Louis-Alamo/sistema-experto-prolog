@@ -43,7 +43,7 @@ PREGUNTAS_GENERALES = [
     ("g12", "¿Con qué frecuencia te has alejado de personas cercanas?"),
     ("g13", "¿Con qué frecuencia perdiste interés en actividades que antes disfrutabas?"),
     ("g14", "¿Con qué frecuencia sientes que no vales lo suficiente?"),
-    ("g15", "¿Con qué frecuencia has tenido una pérdida importante recientemente?"),
+    ("g15", "¿Con qué frecuencia has enfrentado pérdidas importantes en el último año?"),
 ]
 
 
